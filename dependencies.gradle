@@ -1,14 +1,15 @@
 ext {
-    detektVersion = '1.0.0-RC14'
-    ktlintVersion = '0.31.0'
+    detektVersion = '1.1.0'
+    ktlintVersion = '0.35.0'
 
     libraries = [
-            appcompat       : 'androidx.appcompat:appcompat:1.1.0-beta01',
-            corektx         : 'androidx.core:core-ktx:1.2.0-alpha01',
-            constraintlayout: 'androidx.constraintlayout:constraintlayout:2.0.0-beta1',
-            kotlin          : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
-            material        : 'com.google.android.material:material:1.1.0-alpha07',
+            appcompat       : 'androidx.appcompat:appcompat:1.1.0',
+            corektx         : 'androidx.core:core-ktx:1.2.0-beta02',
+            constraintlayout: 'androidx.constraintlayout:constraintlayout:2.0.0-beta3',
+            kotlin          : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version",
+            material        : 'com.google.android.material:material:1.2.0-alpha02',
             timber          : 'com.jakewharton.timber:timber:4.7.1',
-            biometric       : 'androidx.biometric:biometric:1.0.0-alpha04'
+            biometric       : 'androidx.biometric:biometric:1.0.0',
+            leakcanary      : 'com.squareup.leakcanary:leakcanary-android:2.0-beta-3'
     ]
 }

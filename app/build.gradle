@@ -5,11 +5,11 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 'android-Q'
+    compileSdkVersion 29
     defaultConfig {
         applicationId "com.stylingandroid.biometrics"
         minSdkVersion 23
-        targetSdkVersion 28
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
     }
@@ -29,8 +29,8 @@ dependencies {
     implementation libraries.material
     implementation libraries.timber
     implementation libraries.biometric
+    debugImplementation libraries.leakcanary
 }
-
 
 detekt {
     version = detektVersion
@@ -48,6 +48,9 @@ ktlint {
     android = true
     version = ktlintVersion
     ignoreFailures = false
-    reporters = [ReporterType.PLAIN_GROUP_BY_FILE, ReporterType.CHECKSTYLE]
+    reporters {
+       reporter ReporterType.PLAIN_GROUP_BY_FILE
+       reporter ReporterType.CHECKSTYLE
+    }
     outputToConsole = true
 }
