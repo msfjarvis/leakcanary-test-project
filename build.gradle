@@ -27,6 +27,7 @@ subprojects {
     apply plugin: "com.github.ben-manes.versions"
     apply plugin: "org.jlleitschuh.gradle.ktlint"
     apply plugin: 'io.gitlab.arturbosch.detekt'
+    maven { url 'https://ci.android.com/builds/submitted/6259257/androidx_snapshot/latest' }
 }
 
 allprojects {
